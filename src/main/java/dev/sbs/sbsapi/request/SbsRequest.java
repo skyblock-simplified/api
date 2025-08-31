@@ -1,13 +1,13 @@
 package dev.sbs.minecraftapi.client.sbs.request;
 
+import dev.sbs.api.client.request.IRequest;
+import dev.sbs.minecraftapi.client.mojang.profile.MojangProfile;
 import dev.sbs.minecraftapi.client.mojang.response.MojangUsernameResponse;
-import dev.sbs.minecraftapi.client.sbs.response.MojangProfileResponse;
 import dev.sbs.minecraftapi.client.sbs.response.MojangStatusResponse;
 import dev.sbs.minecraftapi.client.sbs.response.SkyBlockEmojis;
 import dev.sbs.minecraftapi.client.sbs.response.SkyBlockEmojisResponse;
 import dev.sbs.minecraftapi.client.sbs.response.SkyBlockImagesResponse;
 import dev.sbs.minecraftapi.client.sbs.response.SkyBlockItemsResponse;
-import dev.sbs.api.client.request.IRequest;
 import feign.Param;
 import feign.RequestLine;
 import org.jetbrains.annotations.NotNull;
@@ -21,10 +21,10 @@ public interface SbsRequest extends IRequest {
     @NotNull MojangUsernameResponse getTestProfileFromUsername(@NotNull @Param("username") String username);
 
     @RequestLine("GET /mojang/user/{username}")
-    @NotNull MojangProfileResponse getProfileFromUsername(@NotNull @Param("username") String username);
+    @NotNull MojangProfile getProfileFromUsername(@NotNull @Param("username") String username);
 
     @RequestLine("GET /mojang/user/{uniqueId}")
-    @NotNull MojangProfileResponse getProfileFromUniqueId(@NotNull @Param("uniqueId") UUID uniqueId);
+    @NotNull MojangProfile getProfileFromUniqueId(@NotNull @Param("uniqueId") UUID uniqueId);
 
     @RequestLine("GET /mojang/status")
     @NotNull MojangStatusResponse getStatus();
