@@ -1,4 +1,4 @@
-package dev.sbs.minecraftapi.client.sbs.exception;
+package dev.sbs.sbsapi.exception;
 
 import com.google.gson.Gson;
 import dev.simplified.client.exception.JsonApiException;

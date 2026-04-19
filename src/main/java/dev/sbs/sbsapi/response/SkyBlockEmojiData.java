@@ -1,4 +1,4 @@
-package dev.sbs.minecraftapi.client.sbs.response;
+package dev.sbs.sbsapi.response;
 
 import dev.simplified.collection.ConcurrentMap;
 import lombok.AccessLevel;

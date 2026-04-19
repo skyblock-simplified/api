@@ -1,12 +1,12 @@
-package dev.sbs.minecraftapi.client.sbs;
+package dev.sbs.sbsapi;
 
-import dev.sbs.minecraftapi.client.mojang.response.MojangProfile;
-import dev.sbs.minecraftapi.client.mojang.response.MojangUsername;
-import dev.sbs.minecraftapi.client.sbs.exception.SbsApiException;
-import dev.sbs.minecraftapi.client.sbs.response.SkyBlockEmojiData;
-import dev.sbs.minecraftapi.client.sbs.response.SkyBlockEmojis;
-import dev.sbs.minecraftapi.client.sbs.response.SkyBlockImages;
-import dev.sbs.minecraftapi.client.sbs.response.SkyBlockItems;
+import dev.sbs.mojangapi.response.MojangProfile;
+import dev.sbs.mojangapi.response.MojangUsername;
+import dev.sbs.sbsapi.exception.SbsApiException;
+import dev.sbs.sbsapi.response.SkyBlockEmojiData;
+import dev.sbs.sbsapi.response.SkyBlockEmojis;
+import dev.sbs.sbsapi.response.SkyBlockImages;
+import dev.sbs.sbsapi.response.SkyBlockItems;
 import dev.simplified.client.request.Contract;
 import dev.simplified.client.route.Route;
 import feign.Param;

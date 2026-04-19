@@ -1,4 +1,4 @@
-package dev.sbs.minecraftapi.client.sbs.response;
+package dev.sbs.sbsapi.response;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
