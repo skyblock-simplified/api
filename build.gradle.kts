@@ -35,7 +35,7 @@ dependencies {
     testImplementation(libs.junit.platform.launcher)
 
     // Sibling - Mojang API (SbsContract returns MojangProfile / MojangUsername)
-    api("com.github.skyblock-simplified:mojang-api:master-SNAPSHOT")
+    api("com.github.simplified-api:mojang:master-SNAPSHOT")
 
     // Simplified Libraries (github.com/simplified-dev)
     api("com.github.simplified-dev:collections:master-SNAPSHOT")
