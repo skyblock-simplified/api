@@ -1,7 +1,7 @@
 package dev.sbs.sbsapi;
 
-import dev.sbs.mojangapi.response.MojangProfile;
-import dev.sbs.mojangapi.response.MojangUsername;
+import api.simplified.mojang.response.MojangProfile;
+import api.simplified.mojang.response.MojangUsername;
 import dev.sbs.sbsapi.exception.SbsApiException;
 import dev.sbs.sbsapi.response.SkyBlockEmojiData;
 import dev.sbs.sbsapi.response.SkyBlockEmojis;
