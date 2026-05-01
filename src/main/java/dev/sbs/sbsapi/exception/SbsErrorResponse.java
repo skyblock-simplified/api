@@ -11,13 +11,13 @@ import org.jetbrains.annotations.NotNull;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class SbsErrorResponse implements ApiErrorResponse {
 
-    protected int statusCode;
+    protected int statusCode = 0;
     @SerializedName("error")
-    protected @NotNull String error;
+    protected @NotNull String error = "UNKNOWN";
     @SerializedName("reason")
-    protected @NotNull String reason;
+    protected @NotNull String reason = "Unknown reason.";
     @SerializedName("route")
-    protected @NotNull String route;
+    protected @NotNull String route = "";
 
     /**
      * Creates a new {@code SbsErrorResponse} for server-side error construction.
@@ -35,15 +35,6 @@ public class SbsErrorResponse implements ApiErrorResponse {
         response.reason = reason;
         response.route = route;
         return response;
-    }
-
-    public static class Unknown extends SbsErrorResponse {
-
-        public Unknown() {
-            super.error = "UNKNOWN";
-            super.reason = "Unknown reason.";
-        }
-
     }
 
 }
