@@ -35,7 +35,7 @@ dependencies {
     testImplementation(libs.junit.platform.launcher)
 
     // Sibling - Mojang API (SimplifiedContract returns MojangProfile / MojangUsername)
-    api("com.github.api:mojang:master-SNAPSHOT")
+    api("com.github.simplified-api:mojang:master-SNAPSHOT")
 
     // Simplified Libraries (github.com/simplified-dev)
     api("com.github.simplified-dev:collections") { version { strictly("652c22d") } }
