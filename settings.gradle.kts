@@ -1,1 +1,1 @@
-rootProject.name = "simplified-api"
+rootProject.name = "api"

@@ -1,12 +1,12 @@
-package dev.sbs.simplifiedapi;
+package dev.sbs.api;
 
 import api.simplified.mojang.response.MojangProfile;
 import api.simplified.mojang.response.MojangUsername;
-import dev.sbs.simplifiedapi.exception.SimplifiedApiException;
-import dev.sbs.simplifiedapi.response.SkyBlockEmojiData;
-import dev.sbs.simplifiedapi.response.SkyBlockEmojis;
-import dev.sbs.simplifiedapi.response.SkyBlockImages;
-import dev.sbs.simplifiedapi.response.SkyBlockItems;
+import dev.sbs.api.exception.SimplifiedApiException;
+import dev.sbs.api.response.SkyBlockEmojiData;
+import dev.sbs.api.response.SkyBlockEmojis;
+import dev.sbs.api.response.SkyBlockImages;
+import dev.sbs.api.response.SkyBlockItems;
 import dev.simplified.client.request.Contract;
 import dev.simplified.client.route.Route;
 import feign.Param;

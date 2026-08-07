@@ -1,4 +1,4 @@
-package dev.sbs.simplifiedapi.exception;
+package dev.sbs.api.exception;
 
 import com.google.gson.annotations.SerializedName;
 import dev.simplified.client.exception.ApiErrorResponse;

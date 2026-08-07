@@ -1,8 +1,8 @@
-package dev.sbs.simplifiedapi;
+package dev.sbs.api;
 
-import dev.sbs.simplifiedapi.response.SkyBlockEmojis;
-import dev.sbs.simplifiedapi.response.SkyBlockImages;
-import dev.sbs.simplifiedapi.response.SkyBlockItems;
+import dev.sbs.api.response.SkyBlockEmojis;
+import dev.sbs.api.response.SkyBlockImages;
+import dev.sbs.api.response.SkyBlockItems;
 import dev.simplified.gson.GsonContributor;
 import dev.simplified.gson.GsonSettings;
 import org.jetbrains.annotations.NotNull;
