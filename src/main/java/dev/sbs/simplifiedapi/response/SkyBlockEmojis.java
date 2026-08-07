@@ -59,7 +59,7 @@ public class SkyBlockEmojis {
                 jsonElement.getAsJsonObject()
                     .entrySet()
                     .stream()
-                    .map(entry -> Pair.of(
+                    .map(entry -> Pair.<String, ConcurrentMap<Boolean, Emoji>>of(
                         entry.getKey(),
                         Concurrent.newMap(
                             Pair.of(false, jdc.deserialize(entry.getValue().getAsJsonObject().get("normal"), Emoji.class)),
