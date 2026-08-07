@@ -34,7 +34,7 @@ dependencies {
     testRuntimeOnly(libs.junit.jupiter.engine)
     testImplementation(libs.junit.platform.launcher)
 
-    // Sibling - Mojang API (SbsContract returns MojangProfile / MojangUsername)
+    // Sibling - Mojang API (SimplifiedContract returns MojangProfile / MojangUsername)
     api("com.github.simplified-api:mojang:master-SNAPSHOT")
 
     // Simplified Libraries (github.com/simplified-dev)

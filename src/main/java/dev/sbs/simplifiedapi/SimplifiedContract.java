@@ -1,12 +1,12 @@
-package dev.sbs.sbsapi;
+package dev.sbs.simplifiedapi;
 
 import api.simplified.mojang.response.MojangProfile;
 import api.simplified.mojang.response.MojangUsername;
-import dev.sbs.sbsapi.exception.SbsApiException;
-import dev.sbs.sbsapi.response.SkyBlockEmojiData;
-import dev.sbs.sbsapi.response.SkyBlockEmojis;
-import dev.sbs.sbsapi.response.SkyBlockImages;
-import dev.sbs.sbsapi.response.SkyBlockItems;
+import dev.sbs.simplifiedapi.exception.SimplifiedApiException;
+import dev.sbs.simplifiedapi.response.SkyBlockEmojiData;
+import dev.sbs.simplifiedapi.response.SkyBlockEmojis;
+import dev.sbs.simplifiedapi.response.SkyBlockImages;
+import dev.sbs.simplifiedapi.response.SkyBlockItems;
 import dev.simplified.client.request.Contract;
 import dev.simplified.client.route.Route;
 import feign.Param;
@@ -22,75 +22,75 @@ import java.util.UUID;
  * @see <a href="https://api.sbs.dev/">SBS Public API</a>
  */
 @Route("api.sbs.dev")
-public interface SbsContract extends Contract {
+public interface SimplifiedContract extends Contract {
 
     /**
      * Fetches a Mojang profile by username via the test endpoint.
      *
      * @param username the player username
      * @return the username lookup response
-     * @throws SbsApiException if the server responds with an HTTP status of 400 or higher
+     * @throws SimplifiedApiException if the server responds with an HTTP status of 400 or higher
      * @deprecated use {@link #getProfileFromUsername(String)} instead
      */
     @RequestLine("GET /test/{username}")
     @Deprecated
-    @NotNull MojangUsername getTestProfileFromUsername(@NotNull @Param("username") String username) throws SbsApiException;
+    @NotNull MojangUsername getTestProfileFromUsername(@NotNull @Param("username") String username) throws SimplifiedApiException;
 
     /**
      * Fetches a cached Mojang profile by username.
      *
      * @param username the player username
      * @return the Mojang profile with unique id, username, and skin data
-     * @throws SbsApiException if the server responds with an HTTP status of 400 or higher
+     * @throws SimplifiedApiException if the server responds with an HTTP status of 400 or higher
      */
     @RequestLine("GET /mojang/user/{username}")
-    @NotNull MojangProfile getProfileFromUsername(@NotNull @Param("username") String username) throws SbsApiException;
+    @NotNull MojangProfile getProfileFromUsername(@NotNull @Param("username") String username) throws SimplifiedApiException;
 
     /**
      * Fetches a cached Mojang profile by unique id.
      *
      * @param uniqueId the player's unique id
      * @return the Mojang profile with unique id, username, and skin data
-     * @throws SbsApiException if the server responds with an HTTP status of 400 or higher
+     * @throws SimplifiedApiException if the server responds with an HTTP status of 400 or higher
      */
     @RequestLine("GET /mojang/user/{uniqueId}")
-    @NotNull MojangProfile getProfileFromUniqueId(@NotNull @Param("uniqueId") UUID uniqueId) throws SbsApiException;
+    @NotNull MojangProfile getProfileFromUniqueId(@NotNull @Param("uniqueId") UUID uniqueId) throws SimplifiedApiException;
 
     /**
      * Fetches the SkyBlock Discord emoji mappings for all items.
      *
      * @return the emoji data keyed by item id
-     * @throws SbsApiException if the server responds with an HTTP status of 400 or higher
+     * @throws SimplifiedApiException if the server responds with an HTTP status of 400 or higher
      */
     @RequestLine("GET /skyblock/emojis.json")
-    @NotNull SkyBlockEmojis getEmojis() throws SbsApiException;
+    @NotNull SkyBlockEmojis getEmojis() throws SimplifiedApiException;
 
     /**
      * Fetches the SkyBlock item image URL mappings.
      *
      * @return the image data keyed by item id
-     * @throws SbsApiException if the server responds with an HTTP status of 400 or higher
+     * @throws SimplifiedApiException if the server responds with an HTTP status of 400 or higher
      */
     @RequestLine("GET /skyblock/images.json")
-    @NotNull SkyBlockImages getImages() throws SbsApiException;
+    @NotNull SkyBlockImages getImages() throws SimplifiedApiException;
 
     /**
      * Fetches the SkyBlock item metadata.
      *
      * @return the item data keyed by item id
-     * @throws SbsApiException if the server responds with an HTTP status of 400 or higher
+     * @throws SimplifiedApiException if the server responds with an HTTP status of 400 or higher
      */
     @RequestLine("GET /skyblock/items.json")
-    @NotNull SkyBlockItems getItems() throws SbsApiException;
+    @NotNull SkyBlockItems getItems() throws SimplifiedApiException;
 
     /**
      * Fetches and aggregates all SkyBlock item emoji, image, and metadata into
      * a single composite object.
      *
      * @return the combined emoji data
-     * @throws SbsApiException if the server responds with an HTTP status of 400 or higher
+     * @throws SimplifiedApiException if the server responds with an HTTP status of 400 or higher
      */
-    default @NotNull SkyBlockEmojiData getItemEmojis() throws SbsApiException {
+    default @NotNull SkyBlockEmojiData getItemEmojis() throws SimplifiedApiException {
         return new SkyBlockEmojiData(
             this.getItems(),
             this.getEmojis(),

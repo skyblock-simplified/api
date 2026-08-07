@@ -1,1 +1,1 @@
-rootProject.name = "sbs-api"
+rootProject.name = "simplified-api"

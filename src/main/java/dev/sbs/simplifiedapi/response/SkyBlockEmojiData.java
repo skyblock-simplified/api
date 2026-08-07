@@ -1,4 +1,4 @@
-package dev.sbs.sbsapi.response;
+package dev.sbs.simplifiedapi.response;
 
 import dev.simplified.collection.ConcurrentMap;
 import lombok.AccessLevel;

@@ -1,4 +1,4 @@
-package dev.sbs.sbsapi.exception;
+package dev.sbs.simplifiedapi.exception;
 
 import com.google.gson.annotations.SerializedName;
 import dev.simplified.client.exception.ApiErrorResponse;
@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class SbsErrorResponse implements ApiErrorResponse {
+public class SimplifiedErrorResponse implements ApiErrorResponse {
 
     protected int statusCode = 0;
     @SerializedName("error")
@@ -20,7 +20,7 @@ public class SbsErrorResponse implements ApiErrorResponse {
     protected @NotNull String route = "";
 
     /**
-     * Creates a new {@code SbsErrorResponse} for server-side error construction.
+     * Creates a new {@code SimplifiedErrorResponse} for server-side error construction.
      *
      * @param statusCode the HTTP status code
      * @param error the HTTP status reason phrase
@@ -28,8 +28,8 @@ public class SbsErrorResponse implements ApiErrorResponse {
      * @param route the HTTP method and request URI
      * @return a new error response
      */
-    public static @NotNull SbsErrorResponse of(int statusCode, @NotNull String error, @NotNull String reason, @NotNull String route) {
-        SbsErrorResponse response = new SbsErrorResponse();
+    public static @NotNull SimplifiedErrorResponse of(int statusCode, @NotNull String error, @NotNull String reason, @NotNull String route) {
+        SimplifiedErrorResponse response = new SimplifiedErrorResponse();
         response.statusCode = statusCode;
         response.error = error;
         response.reason = reason;

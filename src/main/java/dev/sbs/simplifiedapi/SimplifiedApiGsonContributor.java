@@ -1,8 +1,8 @@
-package dev.sbs.sbsapi;
+package dev.sbs.simplifiedapi;
 
-import dev.sbs.sbsapi.response.SkyBlockEmojis;
-import dev.sbs.sbsapi.response.SkyBlockImages;
-import dev.sbs.sbsapi.response.SkyBlockItems;
+import dev.sbs.simplifiedapi.response.SkyBlockEmojis;
+import dev.sbs.simplifiedapi.response.SkyBlockImages;
+import dev.sbs.simplifiedapi.response.SkyBlockItems;
 import dev.simplified.gson.GsonContributor;
 import dev.simplified.gson.GsonSettings;
 import org.jetbrains.annotations.NotNull;
@@ -17,7 +17,7 @@ import java.util.ServiceLoader;
  * module is on the classpath; consumers of {@code GsonSettings.defaults()} get
  * the adapters automatically without touching their own bootstrap code.
  */
-public final class SbsApiGsonContributor implements GsonContributor {
+public final class SimplifiedApiGsonContributor implements GsonContributor {
 
     @Override
     public void contribute(GsonSettings.@NotNull Builder builder) {

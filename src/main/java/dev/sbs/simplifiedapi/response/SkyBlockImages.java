@@ -1,4 +1,4 @@
-package dev.sbs.sbsapi.response;
+package dev.sbs.simplifiedapi.response;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
