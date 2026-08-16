@@ -20,13 +20,10 @@ repositories {
 
 dependencies {
     // Simplified Annotations
+    compileOnly(libs.simplified.annotations)
     annotationProcessor(libs.simplified.annotations)
-
-    // Lombok
-    compileOnly(libs.lombok)
-    annotationProcessor(libs.lombok)
-    testCompileOnly(libs.lombok)
-    testAnnotationProcessor(libs.lombok)
+    testCompileOnly(libs.simplified.annotations)
+    testAnnotationProcessor(libs.simplified.annotations)
 
     // Tests
     testImplementation(libs.hamcrest)
@@ -35,14 +32,14 @@ dependencies {
     testImplementation(libs.junit.platform.launcher)
 
     // Sibling - Mojang API (SimplifiedContract returns MojangProfile / MojangUsername)
-    api("com.github.simplified-api:mojang:master-SNAPSHOT")
+    api("com.github.simplified-api:mojang") { version { strictly("d678198") } }
 
     // Simplified Libraries (github.com/simplified-dev)
-    api("com.github.simplified-dev:collections") { version { strictly("652c22d") } }
-    api("com.github.simplified-dev:utils") { version { strictly("7c2feb7") } }
-    api("com.github.simplified-dev:reflection") { version { strictly("7a28c3a") } }
-    api("com.github.simplified-dev:gson-extras") { version { strictly("2ba8143") } }
-    api("com.github.simplified-dev:client") { version { strictly("3d87a03") } }
+    api("com.github.simplified-dev:collections") { version { strictly("8ca6cb8") } }
+    api("com.github.simplified-dev:utils") { version { strictly("821499b") } }
+    api("com.github.simplified-dev:reflection") { version { strictly("6c3b7c5") } }
+    api("com.github.simplified-dev:gson-extras") { version { strictly("f143dc1") } }
+    api("com.github.simplified-dev:client") { version { strictly("1ca9934") } }
 
     // Gson - Deserializer/TypeAdapter usage plus SerializedName/JsonAdapter annotations
     api(libs.gson)

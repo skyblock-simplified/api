@@ -4,14 +4,13 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
+import dev.simplified.annotations.AccessLevel;
+import dev.simplified.annotations.Getter;
+import dev.simplified.annotations.RequiredArgsConstructor;
 import dev.simplified.collection.Concurrent;
 import dev.simplified.collection.ConcurrentMap;
 import dev.simplified.collection.tuple.pair.Pair;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import org.jetbrains.annotations.NotNull;
-import org.jspecify.annotations.NonNull;
 
 import java.lang.reflect.Type;
 import java.util.Optional;
@@ -37,7 +36,7 @@ public class SkyBlockItems {
     public static class Deserializer implements JsonDeserializer<SkyBlockItems> {
 
         @Override
-        public SkyBlockItems deserialize(@NonNull JsonElement jsonElement, Type type, JsonDeserializationContext jdc) throws JsonParseException {
+        public SkyBlockItems deserialize(@NotNull JsonElement jsonElement, Type type, JsonDeserializationContext jdc) throws JsonParseException {
             return new SkyBlockItems(
                 jsonElement.getAsJsonObject()
                     .entrySet()

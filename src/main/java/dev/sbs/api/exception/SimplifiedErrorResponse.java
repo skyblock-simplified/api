@@ -1,10 +1,10 @@
 package dev.sbs.api.exception;
 
 import com.google.gson.annotations.SerializedName;
+import dev.simplified.annotations.AccessLevel;
+import dev.simplified.annotations.Getter;
+import dev.simplified.annotations.NoArgsConstructor;
 import dev.simplified.client.exception.ApiErrorResponse;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import org.jetbrains.annotations.NotNull;
 
 @Getter
