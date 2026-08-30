@@ -41,6 +41,10 @@ dependencies {
     api("com.github.simplified-dev:gson-extras") { version { strictly("ed1d77e") } }
     api("com.github.simplified-dev:client") { version { strictly("2ced9a4") } }
 
+    // The repository contracts, for the write instruction a queued envelope rebuilds. Contracts
+    // only - nothing here reaches an ORM.
+    api("com.github.simplified-dev:persistence-contracts") { version { strictly("master-SNAPSHOT") } }
+
     // Gson - Deserializer/TypeAdapter usage plus SerializedName/JsonAdapter annotations
     api(libs.gson)
 }
