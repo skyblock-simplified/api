@@ -3,7 +3,7 @@ package dev.sbs.api.write;
 import com.google.gson.Gson;
 import dev.simplified.persistence.JpaModel;
 import dev.simplified.persistence.exception.JpaException;
-import dev.simplified.persistence.store.WriteRequest;
+import dev.simplified.persistence.source.WriteRequest;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.Serial;
