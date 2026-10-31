@@ -32,17 +32,17 @@ dependencies {
     testImplementation(libs.junit.platform.launcher)
 
     // Sibling - Mojang API (SimplifiedContract returns MojangProfile / MojangUsername)
-    api("com.github.simplified-api:mojang") { version { strictly("80fc89f") } }
+    api("com.github.simplified-api:mojang") { version { strictly("b646f6c") } }
 
     // Simplified Libraries (github.com/simplified-dev)
-    api("com.github.simplified-dev:collections") { version { strictly("4029e80") } }
-    api("com.github.simplified-dev:utils") { version { strictly("92ae878") } }
-    api("com.github.simplified-dev:reflection") { version { strictly("5186e88") } }
-    api("com.github.simplified-dev:gson-extras") { version { strictly("9026a04") } }
-    api("com.github.simplified-dev:client") { version { strictly("566f6f6") } }
+    api("com.github.simplified-dev:collections") { version { strictly("6842129") } }
+    api("com.github.simplified-dev:utils") { version { strictly("7cc206f") } }
+    api("com.github.simplified-dev:reflection") { version { strictly("cc90b40") } }
+    api("com.github.simplified-dev:gson-extras") { version { strictly("be044c2") } }
+    api("com.github.simplified-dev:client") { version { strictly("2399b33") } }
 
     // The write instruction a queued envelope rebuilds.
-    api("com.github.simplified-dev:persistence") { version { strictly("230d4b2") } }
+    api("com.github.simplified-dev:persistence") { version { strictly("20ef3ca") } }
 
     // Gson - Deserializer/TypeAdapter usage plus SerializedName/JsonAdapter annotations
     api(libs.gson)
